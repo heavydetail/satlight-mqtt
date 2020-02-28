@@ -16,9 +16,6 @@ class Satellite:
         self.satid = satid
         self.TLE = TLE
 
-    def calcHeading():
-        print('Calculating Heading')
-
     def __eq__(self, other):
         if self.satid == other.satid:
             return True
@@ -72,7 +69,7 @@ def main():
         print(data['info']['transactionscount'])
 
         if data['info']['transactionscount'] > 980:
-            time.sleep(600); # wait for transactions to reduce.
+            time.sleep(600) # wait for transactions to reduce.
 
         for i in range(satcount):
             #fetch additional satellite data for each, TLE
