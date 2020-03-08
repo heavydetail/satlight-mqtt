@@ -107,7 +107,7 @@ def sendSatMQTT(satdata):
     speed = int(float(tle_split[15])) #close enough
 
     print("--> New Sat detected: Publishing MQTT Message to topic 'satlight/sat'\n")
-    mqttc.publish(MQTT_TOPIC, str(direction) + ' ' + str(speed))
+    mqttc.publish(MQTT_TOPIC, str(direction) + '#' + str(speed) + '#')
 
     #print(tle_split)
 
