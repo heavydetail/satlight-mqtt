@@ -35,7 +35,7 @@ mqttc.username_pw_set('satlight','aboveus')
 MQTT_TOPIC = "satlight/sat"
 
 #API
-API_FETCH_TIMEOUT = 24
+API_FETCH_TIMEOUT = 15
 SATBUFFER_TIMEOUT = 120
 WATCH_DEGREE = 5
 API_KEY = 'R5H4CQ-TJQTXV-BQ53MB-48ZP'
