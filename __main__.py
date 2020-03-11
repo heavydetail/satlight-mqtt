@@ -8,6 +8,7 @@ import json
 import time
 import paho.mqtt.client as mqtt
 import requests
+import random
 
 
 class Satellite:
@@ -85,6 +86,7 @@ def main():
             
                 satList.append(tempSat)
                 sendSatMQTT(satdata)
+                time.sleep(random.randint(0, 3000)/1000) # wait random amount of seconds to replicate reality.
             
         print("Stored Satdata: "+str(len(satList)))
         #print(len(satList))
@@ -97,7 +99,7 @@ def main():
         #sendSatMQTT("NW", 134)
 
         
-        time.sleep(API_FETCH_TIMEOUT)
+        time.sleep(random.randint(2,API_FETCH_TIMEOUT)) # wait at least 2 secs, or max api-timeout
 
 def sendSatMQTT(satdata):
     speed = 100
