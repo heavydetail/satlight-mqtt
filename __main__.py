@@ -9,6 +9,7 @@ import time
 import paho.mqtt.client as mqtt
 import requests
 import random
+import config
 
 
 class Satellite:
@@ -39,7 +40,7 @@ MQTT_TOPIC = "satlight/sat"
 API_FETCH_TIMEOUT = 10
 SATBUFFER_TIMEOUT = 120
 WATCH_DEGREE = 6
-API_KEY = 'R5H4CQ-TJQTXV-BQ53MB-48ZP'
+API_KEY = config_api_key
 
 def main():
     print("Satlight N2Y0.com API to MQTT Publisher.\nDeveloped by Tamás Nyilánszky / @heavydetail (c) 2020\n...")
